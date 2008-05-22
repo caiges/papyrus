@@ -1,0 +1,99 @@
+body {
+	font: 14px verdana, arial, helvetica, sans-serif;
+	color: #666;
+	}
+
+/* SIDEBARS */
+
+#sidebarLeftHeading {
+	font-size: 14px;
+	font-weight: bold;
+	color: #404040;
+}
+
+#sidebarRightHeading {
+	font-size: 14px;
+	font-weight: bold;
+	color: #404040;
+}
+
+#sidebarRightBottomHeading {
+	font-size: 14px;
+	font-weight: bold;
+	color: #404040;
+}
+
+#sidebarRightFinancialeading {
+	font-size: 14px;
+	font-weight: bold;
+	color: #404040;
+}
+
+UL.sidebarLinks LI A {
+	font-size: 14px;
+	text-decoration: none;
+	color: #404040 !important;
+}
+
+/* CONTENT HEADER */
+
+#contentHeading {
+	font-size: 22px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #404040;
+}
+
+#contentHeading .filter {
+	font-size: 14px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	color: #404040;
+}
+
+#contentHeading .location {
+	font-size: 12px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	color: #404040;
+}
+
+/* CONTENT */
+
+.pageTitle {
+	font-family: Trebuchet MS;
+	font-size: 20px;
+	color: #38428d;
+}
+
+/* LOGIN ELEMENTS */
+
+.loginText {
+	font: 12px verdana, arial, helvetica, sans-serif;
+	color: #666;
+}
+
+/* FOOTER ELEMENTS */
+
+.footerText {
+	font: 11px verdana, arial, helvetica, sans-serif;
+	color: #666;
+}
+
+/* INPUT ELEMENTS */
+
+input.search {
+	font-size: 13px;
+	color: #6c6c6c;
+}
+
+.formInputBlur {
+	font-size: 13px;
+	color: #6c6c6c;
+	border: 1px solid #7d7d7d;
+	background-color: #fff;
+}
+
+.formInputFocus {
+	font-size: 13px;
+	color: #6c6c6c;
+	border: 1px solid #7d7d7d;
+	background-color: #fffedf;
+}

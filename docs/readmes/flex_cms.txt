@@ -1,0 +1,27 @@
+foundation steps (needed to be completed before creating a page) : 
+ - popup to add privacy levels
+ - popup to create sections
+ - popup to create container types
+
+steps to create a page :
+ - popup to create content of types: html,image,document,links
+ - popup to create content of type : collection (1 previous contents {documents,links} must already exists ... will allow sorting, CREATES ASSOCIATION RECORD)
+ - popup to create a container (1 content is required to create a container, will allow sorting, CREATES ASSOCIATION RECORD)
+ - popup to create a page (1 container is required to create a page, will allow sorting, CREATES ASSOCIATION RECORD)
+
+ 
+ 
+SELECT     a1.*, b1.ContainerRowID AS ContainerRowID, b1.SortOrder AS SortOrder, CONVERT(VARCHAR(50), c1.Text) AS QuickView
+FROM         dbo.content a1 INNER JOIN
+                      dbo.content_to_containers b1 ON (a1.RowID = b1.ContentRowID) INNER JOIN
+                      dbo.content_html c1 ON (a1.ContentRowID = c1.RowID AND a1.ContentType = 'HTML')
+UNION
+SELECT     a2.*, b2.ContainerRowID AS ContainerRowID, b2.SortOrder AS SortOrder, c2.Text AS QuickView
+FROM         dbo.content a2 INNER JOIN
+                      dbo.content_to_containers b2 ON (a2.RowID = b2.ContentRowID) INNER JOIN
+                      dbo.content_links c2 ON (a2.ContentRowID = c2.RowID AND a2.ContentType = 'Link')
+UNION
+SELECT     a3.*, b3.ContainerRowID AS ContainerRowID, b3.SortOrder AS SortOrder, c3.Name + ' (' + c3.Type + ' Collection)' AS QuickView
+FROM         dbo.content a3 INNER JOIN
+                      dbo.content_to_containers b3 ON (a3.RowID = b3.ContentRowID) INNER JOIN
+                      dbo.collections c3 ON (a3.ContentRowID = c3.RowID AND a3.ContentType = 'Collection')

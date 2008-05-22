@@ -1,0 +1,16 @@
+#searchOuter {
+	width: 583px;
+	position: absolute;
+	bottom: 0px;
+	left: 197px;
+	border-bottom: 1px solid #7d7d7d;
+	margin-bottom: 5px;
+	}
+	
+	
+/* HACKS */
+
+/* Set width for content_[id] containers to auto so that onmouseover works */
+.contentDiv {
+	width: 563px;	
+}

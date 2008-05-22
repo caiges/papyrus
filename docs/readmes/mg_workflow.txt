@@ -1,0 +1,57 @@
+FRAMEWORKS
+model-glue : is a framework (mvc) to help structure your application for future maintenence
+coldspring : is a framework (ioc) to help organize your cfcs that are being used ... so that you can give the cfc an alias and not have to remember the file path
+
+DIRECTORY STRUCTURE
+/config : holds the modelglue and coldspring (/beans) xml files
+/controller : holds all controllers that are to be used by modelglue to talk to the cfcs (aka backend) of the application
+/css : holds all style sheets
+/depository : holds all folders that contain files that are stored in the depository tables of the database
+/docs : holds all documentation ... if your unsure how something works read the readme under that directory
+/img : holds the images to be used in the application interface (non-depository)
+/logging : holds cfcs that will log calls made to (coldspring defined) cfcs to help debug applications and to log what users are doing
+/model : holds all the cfcs including all facades,managers,dao,gateways, & bo
+/remote : holds all remote (webservice) enabled cfcs
+/scripts : holds all scripts used in the application interface
+/settings : holds general settings cfcs (some not being used yet)
+/util : holds all general utility cfcs 
+/views : holds all the user interface views that are used by modelglue
+
+CFC FILE TYPES
+manager : (generally) manages all call made to any cfc under that directory ... kinda like a package manager
+dao : data access object ... used to make create, read, update, & delete (CRUD) call to the database
+bo : bean ... used to pass information around to different tiers
+gateway : used when you need to make a call that will effect multiple database table records 
+facade : centralized interface to represent an underlying system
+
+
+GETTING STARTED
+application startup : when the application starts up the first thing it does is put the model-glue framework into memory as an application variable. 
+
+TYPICAL CALLS FROM THE USER - lets say a user wants to create a new contact record
+- the user will fill out a form and press submit
+- modelglue will call the event associated with creating a new contact
+- the form information will be passed from the event-handeler to the controller via a message-listener
+- the form information will be placed into a bean and passed to a facade method and then passed to the appropriate manager
+- the manager will the call the dao responsible for creating a database record for a contact
+- the manager will pass the bean to the dao and the dao will create a new record with the information provided by the bean
+
+ACTUAL CALL TO BUILD A PAGE
+- the user clicks on a navigation link to get a page
+- modelglue will call the event associated with navigation link (found in the url ... ?event=page&pid=12345 ... where pid is the page id)
+- the event-handeler (page) will determine if the user is logged in or not
+- if so the event-handeler will send them to page.edit if not page.read 
+- the resulting page.(whatever) event will then announce a message (getPageContents)
+- a message-listener will pick up the call and then pass the url information (pid) to the controller
+- the controller method called will then call the facade (which holds the pagebuilder cfc) to deal with the building of the page
+- when the facade method is passed the parameters needed it will then call the intranetPageBuilder and pass it the page id
+- the page builder is nothing but a cfc that builds a struct that represents a page it's containers and their contents
+- the buildPage method of the pagebuilder cfc will then make calls to various daos and gateways to build the page structure
+- once built the structure will be passed back to the facade which in tern passes the struct right back to the controller
+- the controller then call one of our utility cfcs to convert the page struct to html
+- the html is then place into a modelglue event variable so that it can be used inside a view.cfm page
+- the controller is finished so the event-handeler that initially broadcast the message will go to the next line of code
+- for us the next line it to put the html (event value) into a view which will be then displayed to a user as a page (page 12345)
+- !thats it! -
+
+

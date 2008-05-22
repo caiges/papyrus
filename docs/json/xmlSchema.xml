@@ -1,0 +1,48 @@
+<!-- xml schema -->
+
+<page id="">
+    <container id="" type="" sortorder="" permission="">
+        <content id="" sortorder="" type="">
+            <c_image source="" />
+            -or-
+            <c_html>text</c_html>
+            -or-
+            <c_link name="" url="" isinternal="" />
+            -or-
+            <c_document name="" path="" size="" createdby="" createddate="" />
+        </content>
+    </container>
+</page>
+    
+<!-- example: would show something like the mockup ... htmltext followed by a collection of links followed by htmltext  -->
+
+<page id="">
+    <container id="" type="" sortorder="" permission="">
+        <content id="" sortorder="" type="">
+            <c_html>text</c_html>
+        </content>
+    </container>
+    <container id="" type="" sortorder="" permission="">
+        <content id="" sortorder="" type="">
+            <content id="" sortorder="" type="">
+                <c_link name="" url="" isinternal="" />
+            </content>
+            <content id="" sortorder="" type="">
+                <c_link name="" url="" isinternal="" />
+            </content>
+            <content id="" sortorder="" type="">
+                <c_link name="" url="" isinternal="" />
+            </content>
+            <content id="" sortorder="" type="">
+                <c_link name="" url="" isinternal="" />
+            </content>
+        </content>
+    </container>
+    <container id="" type="" sortorder="" permission="">
+        <content id="" sortorder="" type="">
+            <c_html>text</c_html>
+        </content>
+    </container>
+</page>
+
+<!-- json utility is need to convert the xml into javascript objects -->

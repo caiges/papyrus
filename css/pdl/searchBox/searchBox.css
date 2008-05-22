@@ -1,0 +1,366 @@
+/* GLOBAL SEARCH */
+
+#resultsloadingIndicator {
+	width: 95%;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#messageLoadingContainer {
+	width: 95%;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/* INTRANET SEARCH */
+
+#intranetSearchContainer {
+	padding-top: 5px;	
+}
+
+#intranetResults {
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 195px;
+	width: 568px;
+	border: 1px solid #7d7d7d;
+	background-color: #ffffff;	
+	overflow-x: auto;
+	overflow-y: scroll;
+}
+	#searchResultsTable {
+		border-collapse: collapse;
+		width: 549px;
+		min-width: 99%;
+	}
+	
+	table#searchResultsTable TD {
+		padding: 5px;
+		font-size: 10px;
+	}
+	
+	#searchResultTitle {
+		width: 65%;
+	}
+	
+	#searchResultLastUpdated {
+		width: 20%;
+		text-align: right;
+	}
+	
+	#searchResultAction {
+		width: 15%;
+		text-align: right;
+	}
+
+#intranetResultsDetails {
+	margin-top: 3px;
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 70px;
+	width: 568px;
+	border: 1px solid #7d7d7d;
+	background-color: #ffffe0;	
+}
+	#searchEngineResultDetailContainer {
+		font-size: 10px;
+		height: 100%;
+	}
+	#searchEngineResultDetailContainerTable {
+		width: 568px;
+		height: 10%;
+	}
+	
+		#sefilesizeLabel {
+			font-weight: bold;
+		}
+		#sefilesize {
+			text-align: left;
+		}
+	
+		#sefirstpostedLabel {
+			font-weight: bold;
+		}
+		#sefirstposted {
+			text-align: left;
+		}
+	
+		#selastupdatedLabel {
+			font-weight: bold;
+		}
+		#selastupdated {
+			text-align: left;
+		}
+	
+		#sepostedbyLabel {
+			font-weight: bold;
+		}
+		#sepostedby {
+			text-align: left;
+		}
+	
+		#sekeywordsLabel {
+			font-weight: bold;
+			display: inline;
+		}
+		#sekeywords {
+			text-align: left;
+		}
+
+#intranetSearchControls {
+	margin-top: 5px;
+	height: 20px;
+	line-height: 20px;
+	padding: 2px;
+	width: 568px;	
+}
+
+#intranetSearchControlsLeft {
+	float: left;
+	margin-left: 5px;
+	text-align: left;
+}
+
+#intranetSearchControlsRight {
+	float: right;
+	margin-right: 5px;
+	text-align: right;
+}
+
+#intranetAdvancedSearch {
+	font-size: 11px;
+}
+
+#intranetSearchHelp {
+	font-size: 11px;
+}
+	
+#closeSearchBoxIcon {
+	margin-top: 3px;
+	text-align: right;
+}
+
+
+/* ROSTER SEARCH */
+
+#rosterSearchContainer {
+	position: relative;
+	padding-top: 5px;	
+}
+
+#rosterResultsContainer {
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 100px;
+	width: 568px;
+	border: 1px solid #7d7d7d;
+	background-color: #ffffff;	
+}
+
+		#rosterResults {
+			height: 100px;
+			overflow-y: scroll;
+			overflow-x: false;
+		}
+				#rosterResultsTable {
+					border-collapse: collapse;
+					/*width: 551px;*/
+					width: 97%;
+					min-width: 100%;
+				}
+				table#rosterResultsTable TD {
+					padding: 5px;
+					font-size: 10px;
+				}
+#rosterResultsDetails {
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 165px;
+	width: 568px;
+	background-color: #ffffff;
+	border: 1px solid #7d7d7d;
+}
+
+#rosterIdentityContainer {
+	float: left;
+	width: 418px;	
+	height: 100%;
+	background-color: #ffffe0;	
+}
+	#rosterPhotoContainer {
+		float: left;
+		margin-top: 8.5px;
+		margin-left: 8.5px;
+	}
+		#rosterphoto {
+			border: 1px solid #7C7D82;
+		}
+	#rosterIdentity {
+		float: left;
+		margin-left: 10.5px;
+		font-size: 10px;
+		height: 100%;
+	}
+		#rosterIdentityTable{
+			border: 0px;
+			border-spacing: 0px;
+			border-collapse: collapse;
+			height: 100%;
+		}
+		#rostername {
+			font-size: 12px;
+			font-weight: bold;
+			color: #000099;
+		}
+		#rosteremail {
+		}
+		#rosterReportsToLabel {
+			font-weight: bold;
+		}
+			#rosterreportsto {
+				
+			}
+		#rosterAdminAssistantLabel {
+			font-weight: bold;
+			
+		}
+			#rosteradminassistant {
+				
+			}
+		#rosterTitleLabel {
+			font-weight: bold;
+		}
+			#rostertitle {
+		
+			}
+		#rosterDivisionLabel {
+			font-weight: bold;
+		}
+			#rosterdivision {
+		
+			}
+		#rosterDepartmentLabel {
+			font-weight: bold;
+		}
+			#rosterdepartment {
+		
+			}
+		#rosterGroupLabel {
+			font-weight: bold;
+		}
+			#rostergroup {
+		
+			}
+		#rosterTerritoryLabel {
+			font-weight: bold;
+		}
+			#rosterterritory {
+		
+			}
+		
+#rosterContactContainer {
+	float: left;
+	width: 149px;
+	height: 100%;
+	border-left: 1px solid #7C7D82;
+	background-color: #FDED95;
+}
+	#rosterContact {
+		float: left;
+		font-size: 10px;
+		height: 100%;
+		padding-left: 3px;
+	}
+		#rosterContactTable {
+			height: 100%;
+		}
+		#rosterPhoneLabel {
+			text-align: center;
+		}
+		#rosterphone {
+			padding-left: 3px;
+		}
+		#rosterVoiceMailLabel {
+			text-align: center;
+		}
+		#rostervoicemail {
+			padding-left: 3px;
+		}
+		#rosterMobileLabel {
+			text-align: center;
+		}
+		#rostermobile {
+			padding-left: 3px;
+		}
+		#rosterFaxLabel {
+			text-align: center;
+		}
+		#rosterfax {
+			padding-left: 3px;
+		}
+		#rosteraddress {
+			text-align: left;
+			padding-left: 6px;
+		}
+		#rosterMapLabel {
+			text-align: center;
+		}
+		#rostermap {
+			padding-left: 3px;
+		}
+
+#rosterSearchControls {
+	margin-top: 5px;
+	height: 20px;
+	padding-left: 2px;
+	padding-right: 2px;
+	width: 568px;	
+}
+
+#rosterSearchControlsLeft {
+	float: left;
+	margin-left: 5px;
+	text-align: left;
+	height: 20px;
+	line-height: 20px;
+}
+
+#rosterSearchControlsRight {
+	float: right;
+	margin-right: 5px;
+	text-align: right;
+	height: 20px;
+}
+
+/* ROSTER ADVANCED SEARCH */
+#rosterAdvancedSearchContainer {
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 95px;
+	width: 568px;
+	background-color: #DBE3FF;
+	border: 1px solid #7d7d7d;
+}
+#rosterAdvancedSearch {
+	display: none;
+	background: #ffffff;
+	height: 100px;
+}
+
+a.rosterImageButton {
+	padding: 1px;
+}
+
+#rosterSearchHelp {
+	font-size: 11px;
+}
+	
+#closeSearchBoxIcon {
+	margin-top: 3px;
+	text-align: right;
+	vertical-align: middle;
+}

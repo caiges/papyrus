@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<menu>
+	<menuheading>
+		<headingtitle>Product Center</headingtitle>
+		<headinglink>index.html</headinglink>
+		<headingid>1</headingid>
+		<headingalign>left</headingalign>
+		<menuitem>
+			<menuitemtitle>KnowledgeBox</menuitemtitle>
+			<menuitemlink>index.html</menuitemlink>
+			<menuitemid>2</menuitemid>
+			<menuitemalign>right</menuitemalign>
+		</menuitem>
+		<menuitem>
+			<menuitemtitle>NovaNet</menuitemtitle>
+			<menuitemlink>index.html</menuitemlink>
+			<menuitemid>3</menuitemid>
+			<menuitemalign>right</menuitemalign>
+		</menuitem>
+		<menuitem>
+			<menuitemtitle>SMe</menuitemtitle>
+			<menuitemlink>index.html</menuitemlink>
+			<menuitemid>3</menuitemid>
+			<menuitemalign>right</menuitemalign>
+		</menuitem>
+		<menuitem>
+			<menuitemtitle>Waterford</menuitemtitle>
+			<menuitemlink>index.html</menuitemlink>
+			<menuitemid>3</menuitemid>
+			<menuitemalign>right</menuitemalign>
+		</menuitem>
+	</menuheading>
+</menu>

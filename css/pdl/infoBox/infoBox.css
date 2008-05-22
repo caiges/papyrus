@@ -1,0 +1,74 @@
+/* InfoBox Expand All Information */
+
+.expandAllLinkContainer {
+    width: 100%;
+    position: relative;
+    top: -15px;
+}
+
+.expandAllLink {
+    font-size: 10px;
+    position: absolute;
+    right: 0px;
+}
+
+/* InfoBox Download Information */
+
+TR.infoBoxRow {
+	
+}
+
+TD.infoBoxCell {
+	margin: 0px;
+	border-top: 0px;
+	padding: 0px !important;
+}
+
+TABLE.infoBoxTable {
+	
+	background-color: #ffffe0;
+	border-bottom: 1px solid #d2d2d2;
+	width: 100%;
+}
+
+TR.infoBoxKeywords {
+	font-family: verdana, arial, helvetica, sans-serif; 
+	font-size: 9px;
+	color: #636363;
+}
+
+.infoBoxDescription {
+	font-family: verdana, arial, helvetica, sans-serif; 
+	font-size: 10px;
+	color: #636363;
+	/*height: 45px;*/ 
+}
+
+.infoBoxField {
+	font-size: 9px;
+	font-weight: bold;
+	color: #636363;
+}
+
+.infoBoxFieldData {
+	font-size: 9px;
+	color: #636363;
+}
+
+.infoBoxDocThumbnailCell {
+    text-align: left;
+    width: 85px;
+}
+
+.infoBoxDocDetailsCell {
+    text-align: left;
+    vertical-align: top;
+}
+
+.infoBoxDocDescriptionCell {
+    text-align: left;
+}
+
+.infoBoxDocThumbnail {
+    border: 1px solid #7d7d7d;
+}

@@ -1,0 +1,397 @@
+/* GENERAL */
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-image: url(../img/bg.gif);
+	background-color: #fff;
+	}
+a {
+	outline: none;	
+}
+
+a:link {
+	color: #36f;
+	}
+a:visited {
+	color: #339;
+	}
+a:hover {
+	color: #69f;
+	}
+a:active {
+	color: #69f;
+	outline: none;
+	}
+
+a.tooltip {
+    position: relative; 
+    color: #000;
+    text-decoration: none;
+    font-family: tahoma;
+    outline: none;
+}
+
+a.tooltip:hover {
+	z-index: 25; 
+	background:;
+}
+
+a.tooltip span {
+	display: none;	
+}
+
+a.tooltip:hover span {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  display: block;
+  background: #045ac4;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  border: 1px solid #d2d2d2;
+ 
+  width: 200px;
+  min-width: 200px;
+  z-index: 100;
+  text-align: center;
+  padding: 5px;
+  opacity: 0.85;
+  filter:alpha(opacity=85);
+}
+
+a.tooltip:hover span:hover {
+	display: none;	
+}
+
+img {
+	border: 0px;
+}
+
+
+/* SIDEBARS */
+
+#sidebarLeftHeading {
+	padding-top: 2px;
+	padding-left: 7px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+#sidebarLeftPapyrusHeading {
+	padding-top: 2px;
+	padding-left: 7px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+#sidebarRightHeading {
+	padding-top: 2px;
+	padding-left: 7px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+#sidebarRightBottomHeading {
+	padding-top: 2px;
+	padding-left: 7px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+#sidebarRightFinancialHeading {
+	padding-top: 2px;
+	padding-left: 7px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+UL.sidebarLinks {
+	margin: 0;
+	padding: 0px;
+	list-style: none;
+}
+
+UL.sidebarLinks LI {
+	list-style: none;
+	text-align: left;
+	line-height: 20px;
+}
+
+UL.sidebarLinks LI.underline {
+	text-align: left;
+	border-bottom: 1px dotted #c6c6c6;
+	line-height: 20px;
+}
+
+UL.sidebarLinks LI A {
+	width: 100%;
+	padding-bottom: 3px;
+}
+
+/* BOOKMARKS LINK LIST */
+
+table.bookmarkLinksTable {
+	visibility: visible;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	border-collapse: collapse;
+}
+
+UL.bookmarkLinks LI div.bookmarkLink {
+	display: inline;
+	width: 200px;
+}
+
+UL.bookmarkLinks LI div.bookmarkDelete {
+	display: inline;
+	width: 15px;
+	text-align: right;
+}
+
+/* DOWNLOADS LINK LIST */
+
+UL.downloadLinks {
+	margin: 0;
+	padding: 0px;
+	list-style: none;
+}
+
+UL.downloadLinks LI {
+	font-size: 11;
+	list-style: none;
+	text-align: left;
+	line-height: 20px;
+}
+
+
+/* CONTENT HEADER */
+
+#contentHeading {
+	padding-left: 7px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+.collectionHeading {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+/* CONTENT */
+
+.headingTitle {
+	margin-bottom: 15px;	
+}
+
+/* FOOTER ELEMENTS */
+
+#copyright {
+	float: left;
+	padding-left: 5px;
+	text-align: left;
+}
+
+#footerlinks {
+	float: right;
+	padding-right: 5px;
+	text-align: right;
+}
+
+/* TABLE ELEMENTS */
+
+table.dataTable {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #d2d2d2;
+	margin-bottom: 20px;
+}
+
+table.dataTable tr td {
+	padding: 3px;
+}
+
+table.dataTable tr td.downloadName {
+	text-align: left;
+	width: 65%;
+}
+
+table.dataTable tr td.downloadDate {
+	text-align: right;
+	width: 15%;
+}
+
+table.dataTable tr td.downloadIcons {
+	text-align: right;
+	width: 20%;
+}
+
+.even {
+	background-color: #FFFFFF;
+}
+
+.odd {
+	background-color: #f5f5f5;
+}
+
+/* LIST ELEMENTS */
+
+UL.links {
+	list-style: none;
+}
+
+UL.links LI {
+	padding: 3px;
+}
+
+/* FORM ELEMENTS */
+
+form.form {
+	margin: 0px;
+	padding: 0px;
+}
+
+form.form fieldset {
+	padding: 0;
+	border: 0;
+	border-top: 1px solid #95A8E8; 
+	border-left: 1px solid #95A8E8;
+	border-bottom: 1px solid #330c8d;
+	border-right: 1px solid #330c8d;
+	background: #f1f4fe;
+	padding-top: 15px;
+}
+
+form.form fieldset legend {
+	font-weight: bold;
+	color: #33;
+	margin: 0 0 0 5px;
+}
+
+form.form fieldset p {
+	padding: 0 5px 5px 5px;
+}
+
+form.form fieldset ul {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+form.form fieldset ul li {
+	margin: 0;
+	padding: 10px 0 10px 10px;
+	list-style: none;
+	border-bottom: 1px solid #d7def4;
+}
+
+form.form fieldset ul li label {
+	display: -moz-inline-box;
+}
+
+form.form fieldset ul li label span {
+	display: -moz-inline-block;
+	display: inline-block;
+	width: 120px;
+}
+
+form.form em {
+	font-weight: bold;
+  	font-style: normal;
+  	color: #f00;
+}
+
+input.text {
+	
+	border-top: 1px solid #7D7D7D;
+	border-right: 1px solid #7D7D7D;
+	border-bottom: 1px solid #7D7D7D;
+	border-left: 1px solid #7D7D7D;
+	
+}
+
+
+
+/* InfoBox Download Information */
+table.downloadInfoTable {
+	background-color: #ffffe0;
+}
+
+
+/* SEARCH INTRANET */
+
+form.searchIntranet {
+	display: inline;	
+}
+
+
+/* SEARCH FIELDS */
+
+input.search {
+	border: 1px solid #7d7d7d;
+	height: 16px;
+	text-align: left;
+}
+
+select.search {
+	border: 1px solid #7d7d7d;
+	height: 16px;
+	text-align: left;
+}
+
+
+/* BORDERS */
+
+.border {
+	border: 1px solid #7d7d7d;	
+}
+
+
+/* MESSAGES */
+
+div.message {
+	border-top: 2px solid #7289dd;
+	border-bottom: 2px solid #7289dd;
+	background: #dbe3ff;
+	color: #333333;
+	padding: 10px 5px 10px 5px;
+}
+
+div.message img {
+	vertical-align: middle;	
+}
+
+div.errorMessage {
+	border-top: 2px solid #ffec94;
+	border-bottom: 2px solid #ffec94;
+	background: #FFFFE0;
+	color: #333333;
+	padding: 10px 5px 10px 5px;
+}
+
+div.errorMessage img {
+	vertical-align: middle;	
+}
+
+
+/* ERIC's HR */
+
+HR {
+	color: #7d7d7d;	
+}
+
+/* FIREFOX HACKS */
+
+/* Always display veritcal scroll bar in Firefox */
+html { 
+	min-height: 100%; 
+	margin-bottom: 1px; 
+}
+
+.opacity25 {
+	background-color: #666666;
+	filter: alpha(opacity=25); 
+	opacity: .25;
+}

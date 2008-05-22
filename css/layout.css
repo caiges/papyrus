@@ -1,0 +1,32 @@
+#navmenu .yuimenubaritemlabel { text-align: center; }
+
+#ft { text-align: center; }
+
+fieldset {
+	border: 1px solid black;
+	border-style: inset;
+	padding: 10px 5px 10px 5px;
+	margin: 10px 0;
+	width: 70%;
+}
+ 
+fieldset label {
+	width: 14em;
+	font-size: 80%;
+	font-family: verdana,sans-serif;
+	font-weight: bold;
+	float: left;
+	text-align: left;
+	margin-right: 0.5em;
+	display: block
+	margin-top: 3px;
+}
+ 
+fieldset legend {
+	color: #000;
+	background: #eee;
+	padding: 0 6px;
+	font-size: 120%;
+	font-family: verdana,sans-serif;
+	font-weight: bold;
+}

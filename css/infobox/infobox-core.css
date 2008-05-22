@@ -1,0 +1,5 @@
+div.info-box-row:hover + div.info-box-row-detail { display: block; visibility: visible; }
+
+div.info-box-row + div.info-box-row-detail:hover { display: block; visibility: visible; }
+
+div.info-box-row-detail { display: none; visibility: hidden; }
