@@ -1,7 +1,3 @@
-#navmenu .yuimenubaritemlabel { text-align: center; }
-
-#ft { text-align: center; }
-
 fieldset {
 	border: 1px solid black;
 	border-style: inset;
@@ -30,3 +26,28 @@ fieldset legend {
 	font-family: verdana,sans-serif;
 	font-weight: bold;
 }
+
+
+/* NAVIGATION */
+#navmenu .yuimenubaritemlabel { text-align: center; }
+
+
+/* INFOBOX */
+div.info-box-row th, td { border: none !important; padding: 0em !important; }
+div.info-box-row table { margin-bottom: 0em !important; }
+div.info-box-row-detail table { margin-bottom: 0em !important; }
+
+
+/* PAPYRUS */
+
+/* PAGE EDITOR */
+div#papyrus-editor-page-view-edit-container h3 { margin: 0em !important; }
+div#papyrus-editor-page-view-sidebar-container h3 { margin: 0em !important; }
+
+/* SECTION EDITOR */
+div#papyrus-editor-section-view-edit-container h3 { margin: 0em !important; }
+div#papyrus-editor-section-view-sidebar-container h3 { margin: 0em !important; }
+
+
+/* FOOTER */
+#ft { text-align: center; }
