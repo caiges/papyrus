@@ -97,7 +97,12 @@
 			name : "papyruseditor",
 			type : "js",
 			fullpath : "lib/pui/papyrus/editor/editor.js",
-			requires : [ "event", "dom", "animation", "container", "button", "papyrus" ]
+			requires : [ "event", "dom", "animation", "container", "button", "papyrus", "papyruseditorcss" ]
+		} );
+		loader.addModule( {
+			name : "papyruseditorcss",
+			type : "css",
+			fullpath : "lib/pui/papyrus/assets/editor.css"
 		} );
 		// Page Editor - We'll combine and minify these into one file for production
 		loader.addModule( {
@@ -152,7 +157,7 @@
 		loader.addModule( {
 			name : "papyrussections",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/sections/section.js",
+			fullpath : "lib/pui/papyrus/editor/sections/sections.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
