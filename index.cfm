@@ -78,7 +78,7 @@
 	<body class="yui-skin-sam"><!-- Define default skin -->
 		<div id="doc4"><!-- 974px width, centered -->
 			<div id="hd"><!-- header -->
-				<cfinclude template="views/menu.cfm" />
+				<cfinclude template="menu.cfm" />
 			</div>
 			<div id="bd"><!-- body -->
 				<div class="yui-gf">
