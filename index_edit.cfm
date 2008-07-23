@@ -25,7 +25,7 @@
 			
 		    // Identify the components you want to load.  Loader will automatically identify
 		    // any additional dependencies required for the specified components.
-		    require: [ "reset-fonts-grids", "base", "menu", "logger", "yuitest", "ejs", "followme", "papyrus", "papyruseditor", "papyruspageeditor", "papyrussectionseditor", "papyrussectioneditor" ],
+		    require: [ "reset-fonts-grids", "base", "menu", "logger", "yuitest", "ejs", "sortablelists", "followme", "papyrus", "papyruseditor", "papyruspageeditor", "papyrussectionseditor", "papyrussectioneditor" ],
 
 		    // Configure loader to pull in optional dependencies.  For example, animation
 		    // is an optional dependency for slider.
@@ -65,6 +65,17 @@
 			name : "ejs",
 			type : "js",
 			fullpath : "scripts/ejs/ejs.js"
+		} );
+		loader.addModule( {
+			name : "sortablelists",
+			type : "js",
+			fullpath : "lib/pui/sortablelists/sortablelists.js",
+			requires : [ "yahoo", "dom", "event", "dragdrop", "sortablelistscss" ]
+		} );
+		loader.addModule( {
+			name : "sortablelistscss",
+			type : "css",
+			fullpath : "lib/pui/sortablelists/assets/sortablelists.css"
 		} );
 		loader.addModule( {
 			name : "followme",
@@ -149,6 +160,12 @@
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
+			name : "papyrussectionseditorviewhelper",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/sections/view_helper.js",
+			requires : [ "papyrus", "dragdrop", "event" ]
+		} );
+		loader.addModule( {
 			name : "papyrussectionseditorcontroller",
 			type : "js",
 			fullpath : "lib/pui/papyrus/editor/sections/controller.js",
@@ -164,7 +181,7 @@
 			name : "papyrussectionseditor",
 			type : "js",
 			fullpath : "lib/pui/papyrus/editor/sections/editor.js",
-			requires : [ "papyruseditor", "papyrussectionseditormodel", "papyrussectionseditorview", "papyrussectionseditorcontroller", "papyrussections" ]
+			requires : [ "papyruseditor", "papyrussectionseditormodel", "papyrussectionseditorview", "papyrussectionseditorviewhelper", "papyrussectionseditorcontroller", "papyrussections" ]
 		} );
 		// Section Editor - We'll combine and minify these into one file for production
 		loader.addModule( {
