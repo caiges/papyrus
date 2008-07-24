@@ -25,7 +25,7 @@
 			
 		    // Identify the components you want to load.  Loader will automatically identify
 		    // any additional dependencies required for the specified components.
-		    require: [ "reset-fonts-grids", "base", "menu", "logger", "yuitest", "ejs", "sortablelists", "followme", "papyrus", "papyruseditor", "papyruspageeditor", "papyrussectionseditor", "papyrussectioneditor" ],
+		    require: [ "reset-fonts-grids", "base", "menu", "logger", "yuitest", "ejs", "sortablelists", "followme", "papyrus", "papyruseditor", "papyruspageeditor", "papyrussectionseditor", "papyrussectioneditor", "papyrushtmleditor" ],
 
 		    // Configure loader to pull in optional dependencies.  For example, animation
 		    // is an optional dependency for slider.
@@ -61,6 +61,11 @@
 		});
 		
 		// Custom modules
+		loader.addModule( {
+			name : "fckeditor",
+			type : "js",
+			fullpath : "lib/fckeditor/fckeditor.js"
+		} );
 		loader.addModule( {
 			name : "ejs",
 			type : "js",
@@ -197,6 +202,12 @@
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
+			name : "papyrussectioneditorviewhelper",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/section/view_helper.js",
+			requires : [ "papyrus", "ejs", "event" ]
+		} );
+		loader.addModule( {
 			name : "papyrussectioneditorcontroller",
 			type : "js",
 			fullpath : "lib/pui/papyrus/editor/section/controller.js",
@@ -212,13 +223,50 @@
 			name : "papyrussectioneditor",
 			type : "js",
 			fullpath : "lib/pui/papyrus/editor/section/editor.js",
-			requires : [ "papyruseditor", "papyrussectioneditormodel", "papyrussectioneditorview", "papyrussectioneditorcontroller", "papyrussection" ]
+			requires : [ "papyruseditor", "papyrussectioneditormodel", "papyrussectioneditorview", "papyrussectioneditorviewhelper", "papyrussectioneditorcontroller", "papyrussection" ]
+		} );
+		// HTML Editor - We'll combine and minify these into one file for production
+		loader.addModule( {
+			name : "papyrushtmleditormodel",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/html/model.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyrushtmleditorview",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/html/view.js",
+			requires : [ "papyrus", "ejs", "event" ]
+		} );
+		loader.addModule( {
+			name : "papyrushtmleditorviewhelper",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/html/view_helper.js",
+			requires : [ "papyrus", "ejs", "event" ]
+		} );
+		loader.addModule( {
+			name : "papyrushtmleditorcontroller",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/html/controller.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyrushtml",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/html/html.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyrushtmleditor",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/html/editor.js",
+			requires : [ "papyruseditor", "papyrushtmleditormodel", "papyrushtmleditorview", "papyrushtmleditorviewhelper", "papyrushtmleditorcontroller", "papyrushtml", "fckeditor" ]
 		} );
 		// Load the files using the insert() method. The insert method takes an optional
 		// configuration object, and in this case we have configured everything in
 		// the constructor, so we don't need to pass anything to insert().
 		loader.insert();
-
+		
 		</script>
 
 		

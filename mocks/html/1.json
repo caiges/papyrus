@@ -1,1 +1,1 @@
-{ "id" : "1", "is_active" : "1", "markup" : "<h1>Hello!</h1>", "user_id" : "1" }
+{ "id" : "1", "title" : "HTML content example", "markup" : "<p>This is an example of html content</p><p><a href='http://www.google.com/'>Google Link</a>", "content_type" : "html", "is_active" : "1" }

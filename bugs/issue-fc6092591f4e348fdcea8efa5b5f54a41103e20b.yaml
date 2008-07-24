@@ -1,0 +1,22 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Sortable list needs to have upward and downward element dropping so that the first item in a list can be dragged above or below the last element in the list.
+desc: ""
+type: :feature
+component: papyrus
+release: "0.1"
+reporter: Caige Nichols <caige@sevenblend.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-07-23 17:01:17.587089 Z
+references: []
+
+id: fc6092591f4e348fdcea8efa5b5f54a41103e20b
+log_events: 
+- - 2008-07-23 17:01:21.713924 Z
+  - Caige Nichols <caige@sevenblend.com>
+  - created
+  - ""
+- - 2008-07-23 17:03:46.353761 Z
+  - Caige Nichols <caige@sevenblend.com>
+  - assigned to release 0.1 from unassigned
+  - ""
