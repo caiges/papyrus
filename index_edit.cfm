@@ -25,7 +25,7 @@
 			
 		    // Identify the components you want to load.  Loader will automatically identify
 		    // any additional dependencies required for the specified components.
-		    require: [ "reset-fonts-grids", "base", "menu", "logger", "yuitest", "ejs", "sortablelists", "followme", "papyrus", "papyruseditor", "papyruspageeditor", "papyrussectionseditor", "papyrussectioneditor", "papyrushtmleditor" ],
+		    require: [ "reset-fonts-grids", "base", "menu", "logger", "yuitest", "ejs", "sortablelists", "followme", "papyrus", "papyruseditor", "papyruspageeditor", "papyrussectionseditor", "papyrussectioneditor", "papyrushtmleditor", "papyruslinkseditor", "papyruslinkeditor" ],
 
 		    // Configure loader to pull in optional dependencies.  For example, animation
 		    // is an optional dependency for slider.
@@ -261,6 +261,80 @@
 			type : "js",
 			fullpath : "lib/pui/papyrus/editor/html/editor.js",
 			requires : [ "papyruseditor", "papyrushtmleditormodel", "papyrushtmleditorview", "papyrushtmleditorviewhelper", "papyrushtmleditorcontroller", "papyrushtml", "fckeditor" ]
+		} );
+		// Links Editor - We'll combine and minify these into one file for production
+		loader.addModule( {
+			name : "papyruslinkseditormodel",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/links/model.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyruslinkseditorview",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/links/view.js",
+			requires : [ "papyrus", "ejs", "event" ]
+		} );
+		loader.addModule( {
+			name : "papyruslinkseditorviewhelper",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/links/view_helper.js",
+			requires : [ "papyrus", "dragdrop", "event" ]
+		} );
+		loader.addModule( {
+			name : "papyruslinkseditorcontroller",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/links/controller.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyruslinks",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/links/links.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyruslinkseditor",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/links/editor.js",
+			requires : [ "papyruseditor", "papyruslinkseditormodel", "papyruslinkseditorview", "papyruslinkseditorviewhelper", "papyruslinkseditorcontroller", "papyruslinks" ]
+		} );
+		// Link Editor - We'll combine and minify these into one file for production
+		loader.addModule( {
+			name : "papyruslinkeditormodel",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/link/model.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyruslinkeditorview",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/link/view.js",
+			requires : [ "papyrus", "ejs", "event" ]
+		} );
+		loader.addModule( {
+			name : "papyruslinkeditorviewhelper",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/link/view_helper.js",
+			requires : [ "papyrus", "ejs", "event" ]
+		} );
+		loader.addModule( {
+			name : "papyruslinkeditorcontroller",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/link/controller.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyruslink",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/link/link.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyruslinkeditor",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/link/editor.js",
+			requires : [ "papyruseditor", "papyruslinkeditormodel", "papyruslinkeditorview", "papyruslinkeditorviewhelper", "papyruslinkeditorcontroller", "papyruslink" ]
 		} );
 		// Load the files using the insert() method. The insert method takes an optional
 		// configuration object, and in this case we have configured everything in
