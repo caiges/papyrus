@@ -2,7 +2,7 @@
     <div class="bd">
         <ul class="first-of-type">
             <li class="yuimenubaritem">
-            	<a class="yuimenubaritemlabel" href="#">Product<br /> News &amp; Info</a>
+            	<a class="yuimenubaritemlabel" href="#">Product<br/>Information</a>
 				<div id="sub1" class="yuimenu">
                     <div class="bd">
                         <ul>
@@ -10,7 +10,7 @@
 								<a class="yuimenuitemlabel" href="#">Waterford</a>
 							</li>
 							<li class="yuimenuitem">
-								<a class="yuimenuitemlabel" href="#">SuccessMaker</a>
+								<a class="yuimenuitemlabel" href="#">Basal</a>
 								<div id="sub2" class="yuimenu">
 				                    <div class="bd">
 				                        <ul>
@@ -21,12 +21,12 @@
 												<a class="yuimenuitemlabel" href="#">SuccessMaker</a>
 											</li>
 											<li class="yuimenuitem">
-												<a class="yuimenuitemlabel" href="#">High Stakes Management</a>
+												<a class="yuimenuitemlabel" href="#">Mathematics</a>
 												<div id="sub3" class="yuimenu">
 								                    <div class="bd">
 								                        <ul>
 															<li class="yuimenuitem">
-																<a class="yuimenuitemlabel" href="#">Level 1</a>
+																<a class="yuimenuitemlabel" href="#">enVision Math</a>
 																<div id="sub4" class="yuimenu">
 												                    <div class="bd">
 												                        <ul>
