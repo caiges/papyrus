@@ -29,7 +29,7 @@
 			
 		    // Identify the components you want to load.  Loader will automatically identify
 		    // any additional dependencies required for the specified components.
-		    require: [ "reset-fonts-grids", "base", "menu", "logger", "yuitest", "ejs", "sortablelists", "followme", "papyrus", "papyruseditor", "papyruspageeditor", "papyrussectionseditor", "papyrussectioneditor", "papyrushtmleditor", "papyruslinkseditor", "papyruslinkeditor", "papyrusdownloadseditor" ],
+		    require: [ "reset-fonts-grids", "base", "menu", "logger", "yuitest", "ejs", "sortablelists", "followme", "papyrus", "papyruseditor", "papyruspageeditor", "papyrussectionseditor", "papyrussectioneditor", "papyrushtmleditor", "papyruslinkseditor", "papyruslinkeditor", "papyrusdownloadseditor", "papyrusdownloadeditor" ],
 
 		    // Configure loader to pull in optional dependencies.  For example, animation
 		    // is an optional dependency for slider.
@@ -376,6 +376,43 @@
 			type : "js",
 			fullpath : "lib/pui/papyrus/editor/downloads/editor.js",
 			requires : [ "papyruseditor", "papyrusdownloadseditormodel", "papyrusdownloadseditorview", "papyrusdownloadseditorviewhelper", "papyrusdownloadseditorcontroller", "papyrusdownloads" ]
+		} );
+		// Download Editor - We'll combine and minify these into one file for production
+		loader.addModule( {
+			name : "papyrusdownloadeditormodel",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/download/model.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyrusdownloadeditorview",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/download/view.js",
+			requires : [ "papyrus", "ejs", "event" ]
+		} );
+		loader.addModule( {
+			name : "papyrusdownloadeditorviewhelper",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/download/view_helper.js",
+			requires : [ "papyrus", "ejs", "event" ]
+		} );
+		loader.addModule( {
+			name : "papyrusdownloadeditorcontroller",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/download/controller.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyrusdownload",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/download/download.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyrusdownloadeditor",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/download/editor.js",
+			requires : [ "papyruseditor", "papyrusdownloadeditormodel", "papyrusdownloadeditorview", "papyrusdownloadeditorviewhelper", "papyrusdownloadeditorcontroller", "papyrusdownload" ]
 		} );
 		// Load the files using the insert() method. The insert method takes an optional
 		// configuration object, and in this case we have configured everything in
