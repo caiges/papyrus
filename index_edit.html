@@ -25,7 +25,7 @@
 			
 		    // Identify the components you want to load.  Loader will automatically identify
 		    // any additional dependencies required for the specified components.
-		    require: [ "reset-fonts-grids", "base", "menu", "logger", "yuitest", "ejs", "sortablelists", "followme", "papyrus", "papyruseditor", "papyruspageeditor", "papyrussectionseditor", "papyrussectioneditor", "papyrushtmleditor", "papyruslinkseditor", "papyruslinkeditor" ],
+		    require: [ "reset-fonts-grids", "base", "menu", "logger", "yuitest", "ejs", "sortablelists", "followme", "papyrus", "papyruseditor", "papyruspageeditor", "papyrussectionseditor", "papyrussectioneditor", "papyrushtmleditor", "papyruslinkseditor", "papyruslinkeditor", "papyrusdownloadseditor" ],
 
 		    // Configure loader to pull in optional dependencies.  For example, animation
 		    // is an optional dependency for slider.
@@ -336,6 +336,43 @@
 			fullpath : "lib/pui/papyrus/editor/link/editor.js",
 			requires : [ "papyruseditor", "papyruslinkeditormodel", "papyruslinkeditorview", "papyruslinkeditorviewhelper", "papyruslinkeditorcontroller", "papyruslink" ]
 		} );
+		// Downloads Editor - We'll combine and minify these into one file for production
+		loader.addModule( {
+			name : "papyrusdownloadseditormodel",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/downloads/model.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyrusdownloadseditorview",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/downloads/view.js",
+			requires : [ "papyrus", "ejs", "event" ]
+		} );
+		loader.addModule( {
+			name : "papyrusdownloadseditorviewhelper",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/downloads/view_helper.js",
+			requires : [ "papyrus", "dragdrop", "event" ]
+		} );
+		loader.addModule( {
+			name : "papyrusdownloadseditorcontroller",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/downloads/controller.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyrusdownloads",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/downloads/downloads.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyrusdownloadseditor",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/downloads/editor.js",
+			requires : [ "papyruseditor", "papyrusdownloadseditormodel", "papyrusdownloadseditorview", "papyrusdownloadseditorviewhelper", "papyrusdownloadseditorcontroller", "papyrusdownloads" ]
+		} );
 		// Load the files using the insert() method. The insert method takes an optional
 		// configuration object, and in this case we have configured everything in
 		// the constructor, so we don't need to pass anything to insert().
@@ -357,7 +394,7 @@
 	<body class="yui-skin-sam"><!-- Define default skin -->
 		<div id="doc4"><!-- 974px width, centered -->
 			<div id="hd"><!-- header -->
-				<cfinclude template="menu.cfm" />
+				<!--#include virtual="menu.html" --> 
 			</div>
 			<div id="bd"><!-- body -->
 				<div class="yui-gf">
