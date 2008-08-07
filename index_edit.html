@@ -29,7 +29,7 @@
 			
 		    // Identify the components you want to load.  Loader will automatically identify
 		    // any additional dependencies required for the specified components.
-		    require: [ "reset-fonts-grids", "base", "menu", "logger", "yuitest", "ejs", "sortablelists", "followme", "papyrus", "papyruseditor", "papyruspageeditor", "papyrussectionseditor", "papyrussectioneditor", "papyrushtmleditor", "papyruslinkseditor", "papyruslinkeditor", "papyrusdownloadseditor", "papyrusdownloadeditor" ],
+		    require: [ "reset-fonts-grids", "base", "menu", "logger", "yuitest", "ejs", "sortablelists", "followme", "papyrus", "papyruseditor", "papyruspageeditor", "papyrussectionseditor", "papyrussectioneditor", "papyrushtmleditor", "papyruslinkseditor", "papyruslinkeditor", "papyrusdownloadseditor", "papyrusdownloadeditor", "papyrusimageseditor", "papyrusimageeditor" ],
 
 		    // Configure loader to pull in optional dependencies.  For example, animation
 		    // is an optional dependency for slider.
@@ -56,7 +56,7 @@
 				YAHOO.util.Event.onDOMReady( YAHOO.widget.papyrus.Editor.init, {}, YAHOO.widget.papyrus.Editor );
 				
 				// YUI Logger
-				//new YAHOO.widget.LogReader(); 
+				new YAHOO.widget.LogReader(); 
 				
 				// Tests
 				//YAHOO.tool.TestRunner.run(); 
@@ -413,6 +413,80 @@
 			type : "js",
 			fullpath : "lib/pui/papyrus/editor/download/editor.js",
 			requires : [ "papyruseditor", "papyrusdownloadeditormodel", "papyrusdownloadeditorview", "papyrusdownloadeditorviewhelper", "papyrusdownloadeditorcontroller", "papyrusdownload" ]
+		} );
+		// Images Editor - We'll combine and minify these into one file for production
+		loader.addModule( {
+			name : "papyrusimageseditormodel",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/images/model.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyrusimageseditorview",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/images/view.js",
+			requires : [ "papyrus", "ejs", "event" ]
+		} );
+		loader.addModule( {
+			name : "papyrusimageseditorviewhelper",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/images/view_helper.js",
+			requires : [ "papyrus", "dragdrop", "event" ]
+		} );
+		loader.addModule( {
+			name : "papyrusimageseditorcontroller",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/images/controller.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyrusimages",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/images/images.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyrusimageseditor",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/images/editor.js",
+			requires : [ "papyruseditor", "papyrusimageseditormodel", "papyrusimageseditorview", "papyrusimageseditorviewhelper", "papyrusimageseditorcontroller", "papyrusimages" ]
+		} );
+		// Image Editor - We'll combine and minify these into one file for production
+		loader.addModule( {
+			name : "papyrusimageeditormodel",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/image/model.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyrusimageeditorview",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/image/view.js",
+			requires : [ "papyrus", "ejs", "event" ]
+		} );
+		loader.addModule( {
+			name : "papyrusimageeditorviewhelper",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/image/view_helper.js",
+			requires : [ "papyrus", "ejs", "event" ]
+		} );
+		loader.addModule( {
+			name : "papyrusimageeditorcontroller",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/image/controller.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyrusimage",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/image/image.js",
+			requires : [ "papyrus" ]
+		} );
+		loader.addModule( {
+			name : "papyrusimageeditor",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/image/editor.js",
+			requires : [ "papyruseditor", "papyrusimageeditormodel", "papyrusimageeditorview", "papyrusimageeditorviewhelper", "papyrusimageeditorcontroller", "papyrusimage" ]
 		} );
 		// Load the files using the insert() method. The insert method takes an optional
 		// configuration object, and in this case we have configured everything in
