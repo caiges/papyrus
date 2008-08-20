@@ -29,7 +29,7 @@
 			
 		    // Identify the components you want to load.  Loader will automatically identify
 		    // any additional dependencies required for the specified components.
-		    require: [ "reset-fonts-grids", "base", "menu", "logger", "yuitest", "ejs", "sortablelists", "followme", "papyrus", "papyruseditor", "papyruspageeditor", "papyrussectionseditor", "papyrussectioneditor", "papyrushtmleditor", "papyruslinkseditor", "papyruslinkeditor", "papyrusdownloadseditor", "papyrusdownloadeditor", "papyrusimageseditor", "papyrusimageeditor" ],
+		    require: [ "reset-fonts-grids", "base", "menu", "logger", "yuitest", "ejs", "sortablelists", "followme", "papyrus", "papyruseditor", "papyruspageeditor", "papyrussectionseditor", "papyrussectioneditor", "papyrushtmleditor", "papyruslinkseditor", "papyruslinkeditor", "papyrusdownloadseditor", "papyrusdownloadeditor", "papyrusimageseditor", "papyrusimageeditor", "tinyvalidate" ],
 
 		    // Configure loader to pull in optional dependencies.  For example, animation
 		    // is an optional dependency for slider.
@@ -87,6 +87,11 @@
 			fullpath : "lib/pui/sortablelists/assets/sortablelists.css"
 		} );
 		loader.addModule( {
+			name : "tinyvalidate",
+			type : "js",
+			fullpath : "lib/tinyvalidate/tinyvalidate.js"
+		} );
+		loader.addModule( {
 			name : "followme",
 			type : "js",
 			fullpath : "lib/pui/followme/followme.js",
@@ -114,10 +119,16 @@
 			fullpath : "lib/pui/papyrus/assets/papyrus.css"
 		} );
 		loader.addModule( {
+			name : "papyrusvalidator",
+			type : "js",
+			fullpath : "lib/pui/papyrus/validator.js",
+			requires : [ "tinyvalidate" ]
+		} );
+		loader.addModule( {
 			name : "papyruseditor",
 			type : "js",
 			fullpath : "lib/pui/papyrus/editor/editor.js",
-			requires : [ "event", "dom", "animation", "container", "button", "papyrus", "papyruseditorcss" ]
+			requires : [ "event", "dom", "animation", "container", "button", "papyrus", "papyruseditorcss", "papyrusvalidator" ]
 		} );
 		loader.addModule( {
 			name : "papyruseditorcss",

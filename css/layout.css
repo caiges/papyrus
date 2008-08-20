@@ -48,6 +48,9 @@ div#papyrus-editor-page-view-sidebar-container h3 { margin: 0em !important; }
 div#papyrus-editor-section-view-edit-container h3 { margin: 0em !important; }
 div#papyrus-editor-section-view-sidebar-container h3 { margin: 0em !important; }
 
+/* EDITOR FIELD ERROR */
+.editor_field_error { border: 2px solid red; }
+
 
 /* FOOTER */
 #ft { text-align: center; }
