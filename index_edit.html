@@ -21,6 +21,17 @@
 		<script type="text/javascript" src="lib/yui/yuiloader/yuiloader-beta.js"></script>
 		
 		<script type="text/javascript">
+		
+		var settings = {
+			domain : "localhost",
+			//base_uri : "/intranet/ws/", 
+			base_uri : "/papyrus/mocks/",
+			//page_ws : "cmsService.cfc?method=getPage&returnformat=json&page_id=",
+			page_ws : "page/",
+			//page_id : 90
+			page_id : 1
+		};
+		
 		// Instantiate and configure Loader:
 		var loader = new YAHOO.util.YUILoader({
 			
@@ -125,10 +136,16 @@
 			requires : [ "tinyvalidate" ]
 		} );
 		loader.addModule( {
+			name : "papyruseditorviewhelper",
+			type : "js",
+			fullpath : "lib/pui/papyrus/editor/view_helper.js",
+			requires : [ "event", "dom" ]
+		} );
+		loader.addModule( {
 			name : "papyruseditor",
 			type : "js",
 			fullpath : "lib/pui/papyrus/editor/editor.js",
-			requires : [ "event", "dom", "animation", "container", "button", "papyrus", "papyruseditorcss", "papyrusvalidator" ]
+			requires : [ "event", "dom", "animation", "container", "button", "papyrus", "papyruseditorcss", "papyrusvalidator", "papyruseditorviewhelper" ]
 		} );
 		loader.addModule( {
 			name : "papyruseditorcss",

@@ -49,7 +49,8 @@ div#papyrus-editor-section-view-edit-container h3 { margin: 0em !important; }
 div#papyrus-editor-section-view-sidebar-container h3 { margin: 0em !important; }
 
 /* EDITOR FIELD ERROR */
-.editor_field_error { border: 2px solid red; }
+.papyrus_editor_field_error_message { color: #8F2C2C; font-size: 77%; }
+.papyrus_editor_field_error { background-color: #EFD1D1; border: 2px solid #8F2C2C; }
 
 
 /* FOOTER */
