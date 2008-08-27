@@ -79,7 +79,7 @@
 		loader.addModule( {
 			name : "fckeditor",
 			type : "js",
-			fullpath : "lib/fckeditor/fckeditor.js"
+			fullpath : "scripts/fckeditor/fckeditor.js"
 		} );
 		loader.addModule( {
 			name : "ejs",
@@ -89,13 +89,13 @@
 		loader.addModule( {
 			name : "sortablelists",
 			type : "js",
-			fullpath : "lib/pui/sortablelists/sortablelists.js",
+			fullpath : "lib/sortablelists/sortablelists.js",
 			requires : [ "yahoo", "dom", "event", "dragdrop", "sortablelistscss" ]
 		} );
 		loader.addModule( {
 			name : "sortablelistscss",
 			type : "css",
-			fullpath : "lib/pui/sortablelists/assets/sortablelists.css"
+			fullpath : "lib/sortablelists/assets/sortablelists.css"
 		} );
 		loader.addModule( {
 			name : "tinyvalidate",
@@ -105,415 +105,415 @@
 		loader.addModule( {
 			name : "followme",
 			type : "js",
-			fullpath : "lib/pui/followme/followme.js",
+			fullpath : "lib/followme/followme.js",
 			requires : [ "event", "dom", "animation", "followmecss" ]
 		} );
 		loader.addModule( {
 			name : "followmecss",
 			type : "css",
-			fullpath : "lib/pui/followme/assets/followme-core.css"
+			fullpath : "lib/followme/assets/followme-core.css"
 		} );
 		loader.addModule( {
 			name : "papyrus",
 			type : "js",
-			fullpath : "lib/pui/papyrus/papyrus.js",
+			fullpath : "lib/papyrus/papyrus.js",
 			requires : [ "event", "dom", "animation", "papyruscorecss", "papyruscss" ]
 		} );
 		loader.addModule( {
 			name : "papyruscorecss",
 			type : "css",
-			fullpath : "lib/pui/papyrus/assets/papyrus-core.css"
+			fullpath : "lib/papyrus/assets/papyrus-core.css"
 		} );
 		loader.addModule( {
 			name : "papyruscss",
 			type : "css",
-			fullpath : "lib/pui/papyrus/assets/papyrus.css"
+			fullpath : "lib/papyrus/assets/papyrus.css"
 		} );
 		loader.addModule( {
 			name : "papyrusvalidator",
 			type : "js",
-			fullpath : "lib/pui/papyrus/validator.js",
+			fullpath : "lib/papyrus/validator.js",
 			requires : [ "tinyvalidate" ]
 		} );
 		loader.addModule( {
 			name : "papyruseditorviewhelper",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/view_helper.js",
+			fullpath : "lib/papyrus/editor/view_helper.js",
 			requires : [ "event", "dom" ]
 		} );
 		loader.addModule( {
 			name : "papyruseditor",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/editor.js",
+			fullpath : "lib/papyrus/editor/editor.js",
 			requires : [ "event", "dom", "animation", "container", "button", "papyrus", "papyruseditorcss", "papyrusvalidator", "papyruseditorviewhelper" ]
 		} );
 		loader.addModule( {
 			name : "papyruseditorcss",
 			type : "css",
-			fullpath : "lib/pui/papyrus/assets/editor.css"
+			fullpath : "lib/papyrus/assets/editor.css"
 		} );
 		// Page Editor - We'll combine and minify these into one file for production
 		loader.addModule( {
 			name : "papyruspageeditormodel",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/page/model.js",
+			fullpath : "lib/papyrus/editor/page/model.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyruspageeditorview",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/page/view.js",
+			fullpath : "lib/papyrus/editor/page/view.js",
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyruspageeditorcontroller",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/page/controller.js",
+			fullpath : "lib/papyrus/editor/page/controller.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyruspageeditorpage",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/page/page.js",
+			fullpath : "lib/papyrus/editor/page/page.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyruspageeditor",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/page/editor.js",
+			fullpath : "lib/papyrus/editor/page/editor.js",
 			requires : [ "papyruseditor", "papyruspageeditormodel", "papyruspageeditorview", "papyruspageeditorcontroller", "papyruspageeditorpage" ]
 		} );
 		// Sections Editor - We'll combine and minify these into one file for production
 		loader.addModule( {
 			name : "papyrussectionseditormodel",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/sections/model.js",
+			fullpath : "lib/papyrus/editor/sections/model.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrussectionseditorview",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/sections/view.js",
+			fullpath : "lib/papyrus/editor/sections/view.js",
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyrussectionseditorviewhelper",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/sections/view_helper.js",
+			fullpath : "lib/papyrus/editor/sections/view_helper.js",
 			requires : [ "papyrus", "dragdrop", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyrussectionseditorcontroller",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/sections/controller.js",
+			fullpath : "lib/papyrus/editor/sections/controller.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrussections",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/sections/sections.js",
+			fullpath : "lib/papyrus/editor/sections/sections.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrussectionseditor",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/sections/editor.js",
+			fullpath : "lib/papyrus/editor/sections/editor.js",
 			requires : [ "papyruseditor", "papyrussectionseditormodel", "papyrussectionseditorview", "papyrussectionseditorviewhelper", "papyrussectionseditorcontroller", "papyrussections" ]
 		} );
 		// Section Editor - We'll combine and minify these into one file for production
 		loader.addModule( {
 			name : "papyrussectioneditormodel",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/section/model.js",
+			fullpath : "lib/papyrus/editor/section/model.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrussectioneditorview",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/section/view.js",
+			fullpath : "lib/papyrus/editor/section/view.js",
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyrussectioneditorviewhelper",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/section/view_helper.js",
+			fullpath : "lib/papyrus/editor/section/view_helper.js",
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyrussectioneditorcontroller",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/section/controller.js",
+			fullpath : "lib/papyrus/editor/section/controller.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrussection",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/section/section.js",
+			fullpath : "lib/papyrus/editor/section/section.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrussectioneditor",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/section/editor.js",
+			fullpath : "lib/papyrus/editor/section/editor.js",
 			requires : [ "papyruseditor", "papyrussectioneditormodel", "papyrussectioneditorview", "papyrussectioneditorviewhelper", "papyrussectioneditorcontroller", "papyrussection" ]
 		} );
 		// HTML Editor - We'll combine and minify these into one file for production
 		loader.addModule( {
 			name : "papyrushtmleditormodel",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/html/model.js",
+			fullpath : "lib/papyrus/editor/html/model.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrushtmleditorview",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/html/view.js",
+			fullpath : "lib/papyrus/editor/html/view.js",
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyrushtmleditorviewhelper",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/html/view_helper.js",
+			fullpath : "lib/papyrus/editor/html/view_helper.js",
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyrushtmleditorcontroller",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/html/controller.js",
+			fullpath : "lib/papyrus/editor/html/controller.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrushtml",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/html/html.js",
+			fullpath : "lib/papyrus/editor/html/html.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrushtmleditor",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/html/editor.js",
+			fullpath : "lib/papyrus/editor/html/editor.js",
 			requires : [ "papyruseditor", "papyrushtmleditormodel", "papyrushtmleditorview", "papyrushtmleditorviewhelper", "papyrushtmleditorcontroller", "papyrushtml", "fckeditor" ]
 		} );
 		// Links Editor - We'll combine and minify these into one file for production
 		loader.addModule( {
 			name : "papyruslinkseditormodel",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/links/model.js",
+			fullpath : "lib/papyrus/editor/links/model.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyruslinkseditorview",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/links/view.js",
+			fullpath : "lib/papyrus/editor/links/view.js",
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyruslinkseditorviewhelper",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/links/view_helper.js",
+			fullpath : "lib/papyrus/editor/links/view_helper.js",
 			requires : [ "papyrus", "dragdrop", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyruslinkseditorcontroller",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/links/controller.js",
+			fullpath : "lib/papyrus/editor/links/controller.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyruslinks",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/links/links.js",
+			fullpath : "lib/papyrus/editor/links/links.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyruslinkseditor",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/links/editor.js",
+			fullpath : "lib/papyrus/editor/links/editor.js",
 			requires : [ "papyruseditor", "papyruslinkseditormodel", "papyruslinkseditorview", "papyruslinkseditorviewhelper", "papyruslinkseditorcontroller", "papyruslinks" ]
 		} );
 		// Link Editor - We'll combine and minify these into one file for production
 		loader.addModule( {
 			name : "papyruslinkeditormodel",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/link/model.js",
+			fullpath : "lib/papyrus/editor/link/model.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyruslinkeditorview",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/link/view.js",
+			fullpath : "lib/papyrus/editor/link/view.js",
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyruslinkeditorviewhelper",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/link/view_helper.js",
+			fullpath : "lib/papyrus/editor/link/view_helper.js",
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyruslinkeditorcontroller",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/link/controller.js",
+			fullpath : "lib/papyrus/editor/link/controller.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyruslink",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/link/link.js",
+			fullpath : "lib/papyrus/editor/link/link.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyruslinkeditor",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/link/editor.js",
+			fullpath : "lib/papyrus/editor/link/editor.js",
 			requires : [ "papyruseditor", "papyruslinkeditormodel", "papyruslinkeditorview", "papyruslinkeditorviewhelper", "papyruslinkeditorcontroller", "papyruslink" ]
 		} );
 		// Downloads Editor - We'll combine and minify these into one file for production
 		loader.addModule( {
 			name : "papyrusdownloadseditormodel",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/downloads/model.js",
+			fullpath : "lib/papyrus/editor/downloads/model.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrusdownloadseditorview",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/downloads/view.js",
+			fullpath : "lib/papyrus/editor/downloads/view.js",
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyrusdownloadseditorviewhelper",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/downloads/view_helper.js",
+			fullpath : "lib/papyrus/editor/downloads/view_helper.js",
 			requires : [ "papyrus", "dragdrop", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyrusdownloadseditorcontroller",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/downloads/controller.js",
+			fullpath : "lib/papyrus/editor/downloads/controller.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrusdownloads",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/downloads/downloads.js",
+			fullpath : "lib/papyrus/editor/downloads/downloads.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrusdownloadseditor",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/downloads/editor.js",
+			fullpath : "lib/papyrus/editor/downloads/editor.js",
 			requires : [ "papyruseditor", "papyrusdownloadseditormodel", "papyrusdownloadseditorview", "papyrusdownloadseditorviewhelper", "papyrusdownloadseditorcontroller", "papyrusdownloads" ]
 		} );
 		// Download Editor - We'll combine and minify these into one file for production
 		loader.addModule( {
 			name : "papyrusdownloadeditormodel",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/download/model.js",
+			fullpath : "lib/papyrus/editor/download/model.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrusdownloadeditorview",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/download/view.js",
+			fullpath : "lib/papyrus/editor/download/view.js",
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyrusdownloadeditorviewhelper",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/download/view_helper.js",
+			fullpath : "lib/papyrus/editor/download/view_helper.js",
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyrusdownloadeditorcontroller",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/download/controller.js",
+			fullpath : "lib/papyrus/editor/download/controller.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrusdownload",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/download/download.js",
+			fullpath : "lib/papyrus/editor/download/download.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrusdownloadeditor",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/download/editor.js",
+			fullpath : "lib/papyrus/editor/download/editor.js",
 			requires : [ "papyruseditor", "papyrusdownloadeditormodel", "papyrusdownloadeditorview", "papyrusdownloadeditorviewhelper", "papyrusdownloadeditorcontroller", "papyrusdownload" ]
 		} );
 		// Images Editor - We'll combine and minify these into one file for production
 		loader.addModule( {
 			name : "papyrusimageseditormodel",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/images/model.js",
+			fullpath : "lib/papyrus/editor/images/model.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrusimageseditorview",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/images/view.js",
+			fullpath : "lib/papyrus/editor/images/view.js",
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyrusimageseditorviewhelper",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/images/view_helper.js",
+			fullpath : "lib/papyrus/editor/images/view_helper.js",
 			requires : [ "papyrus", "dragdrop", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyrusimageseditorcontroller",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/images/controller.js",
+			fullpath : "lib/papyrus/editor/images/controller.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrusimages",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/images/images.js",
+			fullpath : "lib/papyrus/editor/images/images.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrusimageseditor",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/images/editor.js",
+			fullpath : "lib/papyrus/editor/images/editor.js",
 			requires : [ "papyruseditor", "papyrusimageseditormodel", "papyrusimageseditorview", "papyrusimageseditorviewhelper", "papyrusimageseditorcontroller", "papyrusimages" ]
 		} );
 		// Image Editor - We'll combine and minify these into one file for production
 		loader.addModule( {
 			name : "papyrusimageeditormodel",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/image/model.js",
+			fullpath : "lib/papyrus/editor/image/model.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrusimageeditorview",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/image/view.js",
+			fullpath : "lib/papyrus/editor/image/view.js",
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyrusimageeditorviewhelper",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/image/view_helper.js",
+			fullpath : "lib/papyrus/editor/image/view_helper.js",
 			requires : [ "papyrus", "ejs", "event" ]
 		} );
 		loader.addModule( {
 			name : "papyrusimageeditorcontroller",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/image/controller.js",
+			fullpath : "lib/papyrus/editor/image/controller.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrusimage",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/image/image.js",
+			fullpath : "lib/papyrus/editor/image/image.js",
 			requires : [ "papyrus" ]
 		} );
 		loader.addModule( {
 			name : "papyrusimageeditor",
 			type : "js",
-			fullpath : "lib/pui/papyrus/editor/image/editor.js",
+			fullpath : "lib/papyrus/editor/image/editor.js",
 			requires : [ "papyruseditor", "papyrusimageeditormodel", "papyrusimageeditorview", "papyrusimageeditorviewhelper", "papyrusimageeditorcontroller", "papyrusimage" ]
 		} );
 		// Load the files using the insert() method. The insert method takes an optional
